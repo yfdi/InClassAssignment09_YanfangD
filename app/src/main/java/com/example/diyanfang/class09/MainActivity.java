@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
     String title;
     String name;
-    int age;
+    int age = 0;
     boolean isGraduated;
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
-//    private DatabaseReference personRef = database.getReference("Person");
+    private DatabaseReference personRef = database.getReference("Person");
     private DatabaseReference peopleRef = database.getReference("Multiple people");
 
     @Override
@@ -43,12 +43,9 @@ public class MainActivity extends AppCompatActivity {
         isGraduatedCheckBox = findViewById(R.id.is_graduated_checkBox);
         displayText = findViewById(R.id.display_text);
 
-        title = titleText.getText().toString();
-        name = nameText.getText().toString();
-        age = Integer.parseInt(ageText.getText().toString());
-        isGraduated = Boolean.valueOf(isGraduatedCheckBox.getText().toString());
 
-        peopleRef.setValue(new Person("Nicole",22,true));
+
+//        peopleRef.setValue(new Person("Nicole",22,true));
 
 
         peopleRef.addValueEventListener(new ValueEventListener() {
@@ -75,6 +72,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addPerson(View view){
+
+        title = titleText.getText().toString();
+        name = nameText.getText().toString();
+        isGraduated = Boolean.valueOf(isGraduatedCheckBox.getText().toString());
+        age = Integer.parseInt(ageText.getText().toString());
+
+//        String ageInfo = ageText.getText().toString();
+//        try{
+//            age = Integer.parseInt(ageInfo);
+//        }catch (NumberFormatException e){
+//            ageInfo = ""; // this will cause the parameter check for quantity ordered to fail and pop toast
+//        }
+
         peopleRef.setValue(new Person(name, age, isGraduated));
     }
 
