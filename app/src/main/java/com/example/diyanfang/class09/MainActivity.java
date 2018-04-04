@@ -17,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
 
-    EditText titleText;
+    TextView titleText;
     EditText nameText;
     EditText ageText;
     CheckBox isGraduatedCheckBox;
@@ -44,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
         displayText = findViewById(R.id.display_text);
 
 
-
-//        peopleRef.setValue(new Person("Nicole",22,true));
-
-
         peopleRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -66,14 +62,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     public void setTitle(View view){
+
+        title = titleText.getText().toString();
         titleText.setText(title);
     }
 
     public void addPerson(View view){
 
-        title = titleText.getText().toString();
         name = nameText.getText().toString();
         isGraduated = Boolean.valueOf(isGraduatedCheckBox.getText().toString());
         age = Integer.parseInt(ageText.getText().toString());
