@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
     public void addPerson(View view) {
 
         name = nameText.getText().toString();
-        isGraduated = Boolean.valueOf(isGraduatedCheckBox.getText().toString());
         age = Integer.parseInt(ageText.getText().toString());
+        isGraduated = isGraduatedCheckBox.isChecked();
 
 //        String ageInfo = ageText.getText().toString();
 //        try{
