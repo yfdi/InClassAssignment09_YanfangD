@@ -11,66 +11,62 @@
         android:id="@+id/title_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Title"
-        android:layout_marginTop="24dp"
+        android:gravity="center"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        android:onClick="setTitle"
-        />
+        android:layout_marginTop="24dp"
+        android:hint="Title"
+        android:onClick="setTitle" />
 
     <Button
         android:id="@+id/set_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Set Title"
-        android:onClick="setTitle"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        />
+        android:onClick="setTitle"
+        android:text="Set Title" />
 
     <EditText
         android:id="@+id/name_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        />
+        android:hint="Name" />
 
     <EditText
         android:id="@+id/age_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Age"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        />
+        android:hint="Age" />
+
     <CheckBox
         android:id="@+id/is_graduated_checkBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Is graduated?"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        />
+        android:text="Is graduated?" />
 
     <Button
         android:id="@+id/add_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Person"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:onClick="addPerson"
-        />
+        android:text="Add Person" />
+
     <TextView
         android:id="@+id/display_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        android:textSize="18sp"
-        />
+        android:textSize="18sp" />
 
 
 </LinearLayout>

@@ -62,13 +62,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void setTitle(View view){
+    public void setTitle(View view) {
 
         title = titleText.getText().toString();
         titleText.setText(title);
     }
 
-    public void addPerson(View view){
+    public void addPerson(View view) {
 
         name = nameText.getText().toString();
         isGraduated = Boolean.valueOf(isGraduatedCheckBox.getText().toString());
